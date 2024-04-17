@@ -11,9 +11,11 @@
     display: flex;
     /* Align items to the start of the flex container */
     padding: 20px; /* Add padding around the form */
+    height: 100vh;
 }
 
 .blueRect {
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -22,14 +24,17 @@
     color: white; /* Text color */
     padding: 20px; /* Add padding inside the blue rectangle */
     border-radius: 12px;
-}
+    height: 100%}
 
     
 /* Add more specific styles for titles, paragraphs, etc. within the blue rectangle */
 
 .form-container {
-    flex-basis: 75%; /* Adjust this as per your design requirement */
-    padding: 20px; /* Add padding inside the form container */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-basis:64%; /* Adjust this as per your design requirement */
+    padding: 0 0 0 24px; /* Add padding inside the form container */
 }
 
 .blueRect-footer {
@@ -50,12 +55,36 @@
     font-weight: 500;
 }
 
+.form-signup_text {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.form-redirect_text {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.form-redirect_text a {
+    font-weight: bold;
+    color: #3A4DF9;
+}
+
+/* En son input elemanı için sağ boşluğu sıfırla */
+.input-container:last-child,
+.input-mail_pass-container:last-child,
+.input-phone_date-container:last-child,
+.input-hobbies_gender-container:last-child,
+.form-inputs-reason {
+    margin-right: 0;
+}
+
 input[type="text"],
 input[type="password"] {
     width: 100%; /* Full width */
     padding: 15px; /* Padding inside the input fields */
     margin: 10px 0; /* Margin for spacing between fields */
-    border: 1px solid #ddd; /* Border style */
+    border: 2px solid #E1E1E1; /* Border style */
     border-radius: 5px; /* Rounded corners for the input fields */
 }
 
@@ -74,6 +103,8 @@ button:hover {
     background-color: #2a29d4; /* Darker background color on hover */
 }
 
+
+
 /* Add responsive design */
 @media (max-width: 768px) {
     .form {
@@ -85,3 +116,170 @@ button:hover {
         flex-basis: 100%; /* Full width on smaller screens */
     }
 }
+
+.form-inputs-name-surname {
+    display: flex; /* Flex konteyner olarak ayarla */
+    justify-content: flex-start; /* Elemanları başlangıç kenarına hizala */
+    align-items: center; /* Elemanları dikey olarak ortala */
+    width: 100%; /* Dış div'in tam genişliğini kapla */
+  }
+  
+  .form-inputs-name-surname form {
+    display: flex; /* Form içinde flexbox kullan */
+    width: 100%; /* Formun tam genişliği kapla */
+  }
+  
+  .input-container {
+    flex: 1; /* Flex elemanları eşit olarak genişlet */
+    margin-right: 10px; /* Inputların arasında sağa doğru boşluk bırak */
+  }
+  
+  
+  .form-inputs-name-surname input[type="text"] {
+    width: 100%; /* Input elemanının genişliğini kapla */
+    padding: 15px; /* Padding ekleyerek daha büyük tıklama alanı sağla */
+    box-sizing: border-box; /* Padding ve border genişliği toplam genişliği etkilemez */
+  }
+  
+
+   /*-----------------------*/
+   .form-inputs-email-pass {
+    display: flex; /* Flex konteyner olarak ayarla */
+    justify-content: flex-start; /* Elemanları başlangıç kenarına hizala */
+    align-items: center; /* Elemanları dikey olarak ortala */
+    width: 100%; /* Dış div'in tam genişliğini kapla */
+  }
+  
+  .form-inputs-email-pass form {
+    display: flex; /* Form içinde flexbox kullan */
+    width: 100%; /* Formun tam genişliği kapla */
+  }
+  
+  .input-mail_pass-container {
+    flex: 1; /* Flex elemanları eşit olarak genişlet */
+    margin-right: 10px; /* Inputların arasında sağa doğru boşluk bırak */
+  }
+  
+  
+  .form-inputs-email-pass input[type="text"] {
+    width: 100%; /* Input elemanının genişliğini kapla */
+    padding: 15px; /* Padding ekleyerek daha büyük tıklama alanı sağla */
+    box-sizing: border-box; /* Padding ve border genişliği toplam genişliği etkilemez */
+    
+  }
+  
+  /*-----------------------*/
+  .form-inputs-phone-date {
+    display: flex; /* Flex konteyner olarak ayarla */
+    justify-content: flex-start; /* Elemanları başlangıç kenarına hizala */
+    align-items: center; /* Elemanları dikey olarak ortala */
+    width: 100%; /* Dış div'in tam genişliğini kapla */
+
+  }
+  
+  .form-inputs-phone-date form {
+    display: flex; /* Form içinde flexbox kullan */
+    width: 100%; /* Formun tam genişliği kapla */
+  }
+  
+  .input-phone_date-container {
+    flex: 1; /* Flex elemanları eşit olarak genişlet */
+    margin-right: 10px; /* Inputların arasında sağa doğru boşluk bırak */
+    
+    
+  }
+  
+  
+  .form-inputs-phone-date input[type="text"] {
+    width: 100%; /* Input elemanının genişliğini kapla */
+    padding: 15px; /* Padding ekleyerek daha büyük tıklama alanı sağla */
+    box-sizing: border-box; /* Padding ve border genişliği toplam genişliği etkilemez */
+  }
+
+  /*-----------------------*/
+  .form-inputs-hobbies-gender {
+    display: flex; /* Flex konteyner olarak ayarla */
+    justify-content: flex-start; /* Elemanları başlangıç kenarına hizala */
+    align-items: center; /* Elemanları dikey olarak ortala */
+    width: 100%; /* Dış div'in tam genişliğini kapla */
+  }
+  
+  .form-inputs-hobbies-gender form {
+    display: flex; /* Form içinde flexbox kullan */
+    width: 100%; /* Formun tam genişliği kapla */
+  }
+  
+  .input-hobbies_gender-container {
+    flex: 1; /* Flex elemanları eşit olarak genişlet */
+    margin-right: 10px; /* Inputların arasında sağa doğru boşluk bırak */
+  }
+  
+  
+  .form-inputs-hobbies-gender input[type="text"] {
+    width: 100%; /* Input elemanının genişliğini kapla */
+    padding: 15px; /* Padding ekleyerek daha büyük tıklama alanı sağla */
+    box-sizing: border-box; /* Padding ve border genişliği toplam genişliği etkilemez */
+  }
+
+  select {
+    width: 100%; /* Tam genişlik kullan */
+    padding: 15px; /* İyi bir tıklama alanı için padding */
+    margin: 10px 0; /* Üst ve alt elementler arası boşluk */
+    border: 1px solid #E1E1E1; /* Sınır stilini belirle */
+    border-radius: 5px; /* Kenarları yuvarlak yap */
+    -webkit-appearance: none; /* Bazı tarayıcıların varsayılan stilini kaldır */
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer; /* İmleç el şeklinde olsun */
+    background: url("../images/interestPolygon.svg") no-repeat;
+    background-position: right 15px top 50%;
+
+}
+
+#input-phone-date {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+#input-phone-date input {
+  display: flex;
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  border: 2px solid #E1E1E1;
+  }
+
+  .footer-p_info-container {
+    display: flex;
+    margin-top: 8px;
+  }
+
+  .footer-p_info-para {
+    font-size: 12px;
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  .footer-p_info {
+    font-family: Poppins;
+    font-weight: bold;
+
+  }
+
+  .footer-photo {
+    border-radius: 5px;
+  }
+
+  textarea {
+    resize: none;
+    width: 100%; /* Full width */
+    padding: 15px; /* Padding inside the input fields */
+    margin: 10px 0; /* Margin for spacing between fields */
+    border: 2px solid #E1E1E1; /* Border style */
+    border-radius: 5px;
+  }
