@@ -30,81 +30,116 @@ const registerPage = () => {
     </div>
       <div className='form-container'>
       <div className='form-header'>
-      <div className='form-signup_text'>Kayıt Ol</div>
-      <div className='form-redirect_text'>Hesabınız var mı? <a href="#">Giriş Yapın</a></div>
+      <div className='form-signup_text'>2.Adım</div>
       </div>
        
- {/*ISIM VE SOYISIM INPUTU */}
-        <div class="form-inputs-name-surname">
-  <form> 
-    <div class="input-container">
-      <input type="text" name="name" placeholder='Ad*' />
-    </div>
-    <div class="input-container">
-      <input type="text" name="surname" placeholder='Soyad*' />
-    </div>
-  </form>
-</div>
-{/*EMAİL VE PASSWORD INPUTU */}
-<div class="form-inputs-email-pass">
-  <form> 
-    <div class="input-mail_pass-container">
-      <input type="text" name="email" placeholder='Email*' />
-    </div>
-    <div class="input-mail_pass-container">
-      <input type="password" name="password" placeholder='Password*' />
-    </div>
-  </form>
-</div>
-
-
-{/*PHONE VE DATE INPUTU */}
-<div class="form-inputs-phone-date">
-  <form> 
-    <div class="input-phone_date-container">
-      <input type="text" name="phone" placeholder='Telefon Numarası*' />
-    </div>
-    <div class="input-phone_date-container" id="input-phone-date">
-      <input type="date" name="date" min="1996-01-01" max="2040-12-31" />
-    </div>
-  </form>
-</div>
-
-{/*HOBİ VE CİNSİYET INPUTU */}
-<div class="form-inputs-hobbies-gender">
-  <form> 
-    <div class="input-hobbies_gender-container">
-    <select name="hobiler" className ="hobiler" required>
       
-    <option value="">Hobiler</option>
-    <option value="erkek">Araba</option>
-    <option value="kiz">Ev</option>
-</select>     </div>
-    <div class="input-hobbies_gender-container">
-    <select name="cinsiyet" className ="cinsiyet" required>
-    <option value="">Cinsiyet</option>
-    <option value="erkek">Erkek</option>
-    <option value="kiz">Kız</option>
+
+      <div class="form-inputs-id-country">
+  <form> 
+    <div class="input-container">
+      <input type="text" name="name" placeholder='Kimlik No.*' />
+    </div>
+    <div class="input-country-container">
+    <select name="country" className ="country" required>
+    <option value="">Ülke*</option>
+    <option value="erkek">Türkiye</option>
+    <option value="kiz">Netherlands</option>
 </select>   
 </div>
   </form>
-
-
-
-        
 </div>
 
-<div className='form-inputs_whyfit'>
+
+      <div class="form-inputs-city-district">
+  <form> 
+    <div class="input-country-container">
+    <select name="city" className ="city" required>
       
-      <div>
-        <textarea type="textarea" placeholder='Fitsocialize’i neden kullanmak istiyorum?*'/></div>
+    <option value="">Şehir*</option>
+    <option value="erkek">Gaziantep</option>
+    <option value="kiz">Ankara</option>
+</select>     
+</div>
+    <div class="input-country-container">
+    <select name="district" className ="district" required>
+    <option value="">İlçe*</option>
+    <option value="erkek">Şehitkamil</option>
+    <option value="kiz">Şahinbey</option>
+</select>   
+</div>
+  </form>     
+</div>
+
+
+<div class="form-inputs-id-country">
+  <form> 
+    <div class="input-container">
+      <input type="text" name="name" placeholder='Deneyim Yılı' />
+      
+    </div>
+      
+    <div className='equal-container'>
+      <label class="toggle-button">
+        <input type="checkbox" class="checkbox"></input>
+        <span class="slider">Online</span>
+      </label>
+
+      <label class="toggle-button">
+        <input type="checkbox" class="checkbox"></input>
+        <span class="slider">Yüz Yüze</span>
+      </label>
+    </div>
+    
+
+      
+  </form>
+</div>
+
+<div className='form-inputs_adress'>
+      
+      <div className='adress-container'>
+        <textarea type="textarea" placeholder='Adres Bilgileri*'/></div>
       </div>
 
+      <div className="file-upload-wrapper">
+        <input type="file" id="file-input" className="file-input" accept=".jpeg, .jpg, .png, .webp, .pdf" />
+          <label htmlFor="file-input" className="file-input-label">
+            Dosya seçin ya da buraya sürükleyin.
+          </label>
+          <div className="file-upload-info">
+            En fazla: 5 MB; izin verilen uzantılar: jpeg,jpg,png,webp,pdf
+          </div>
+      </div>
+
+    <div className='important-notice'>E-devletten alınmış mezuniyet belgenizi veya diplomanızı ekleyin.</div>
+
+      <div className='label-container'>
+        <label>
+        <input type="checkbox" />
+        Kişisel verilerinizin işlenmesi hakkında aydınlatma metni için tıklayınız.
+        </label>
+        <label>
+          <input type="checkbox" />
+          Üyelik Sözleşmesi’ni okudum ve kabul ediyorum.
+        </label>
+        <label>
+          <input type="checkbox" />
+          Kişiye özel pazarlama faaliyetleri kapsamında kişisel verilerimin işlenmesine açık rıza veriyorum.
+        </label>
+      </div>
+      
 
         <div className='form-signup_box'><button>Hesap Oluştur</button></div>
 
+        
+
       </div>
+
+      
     </div>
+
+    
 
   )
 }

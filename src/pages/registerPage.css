@@ -56,25 +56,16 @@
 }
 
 .form-signup_text {
-    font-size: 28px;
+    font-size: 2rem;
     font-weight: 600;
-}
-
-.form-redirect_text {
-    font-size: 18px;
-    margin-bottom: 12px;
-}
-
-.form-redirect_text a {
-    font-weight: bold;
-    color: #3A4DF9;
+    color: #3532E5;
 }
 
 /* En son input elemanı için sağ boşluğu sıfırla */
 .input-container:last-child,
 .input-mail_pass-container:last-child,
 .input-phone_date-container:last-child,
-.input-hobbies_gender-container:last-child,
+.input-country-container:last-child,
 .form-inputs-reason {
     margin-right: 0;
 }
@@ -88,7 +79,7 @@ input[type="password"] {
     border-radius: 5px; /* Rounded corners for the input fields */
 }
 
-button {
+.form-signup_box button {
     margin-top: 16px;
     width: 100%; /* Full width */
     padding: 15px; /* Padding inside the button */
@@ -99,7 +90,7 @@ button {
     cursor: pointer; /* Pointer cursor on hover */
 }
 
-button:hover {
+.form-signup_box button:hover {
     background-color: #2a29d4; /* Darker background color on hover */
 }
 
@@ -117,14 +108,14 @@ button:hover {
     }
 }
 
-.form-inputs-name-surname {
+.form-inputs-id-country {
     display: flex; /* Flex konteyner olarak ayarla */
     justify-content: flex-start; /* Elemanları başlangıç kenarına hizala */
     align-items: center; /* Elemanları dikey olarak ortala */
     width: 100%; /* Dış div'in tam genişliğini kapla */
   }
   
-  .form-inputs-name-surname form {
+  .form-inputs-id-country form {
     display: flex; /* Form içinde flexbox kullan */
     width: 100%; /* Formun tam genişliği kapla */
   }
@@ -135,7 +126,7 @@ button:hover {
   }
   
   
-  .form-inputs-name-surname input[type="text"] {
+  .form-inputs-id-country input[type="text"] {
     width: 100%; /* Input elemanının genişliğini kapla */
     padding: 15px; /* Padding ekleyerek daha büyük tıklama alanı sağla */
     box-sizing: border-box; /* Padding ve border genişliği toplam genişliği etkilemez */
@@ -197,25 +188,25 @@ button:hover {
   }
 
   /*-----------------------*/
-  .form-inputs-hobbies-gender {
+  .form-inputs-city-district {
     display: flex; /* Flex konteyner olarak ayarla */
     justify-content: flex-start; /* Elemanları başlangıç kenarına hizala */
     align-items: center; /* Elemanları dikey olarak ortala */
     width: 100%; /* Dış div'in tam genişliğini kapla */
   }
   
-  .form-inputs-hobbies-gender form {
+  .form-inputs-city-district form {
     display: flex; /* Form içinde flexbox kullan */
     width: 100%; /* Formun tam genişliği kapla */
   }
   
-  .input-hobbies_gender-container {
+  .input-country-container {
     flex: 1; /* Flex elemanları eşit olarak genişlet */
     margin-right: 10px; /* Inputların arasında sağa doğru boşluk bırak */
   }
   
   
-  .form-inputs-hobbies-gender input[type="text"] {
+  .form-inputs-city-district input[type="text"] {
     width: 100%; /* Input elemanının genişliğini kapla */
     padding: 15px; /* Padding ekleyerek daha büyük tıklama alanı sağla */
     box-sizing: border-box; /* Padding ve border genişliği toplam genişliği etkilemez */
@@ -282,4 +273,93 @@ button:hover {
     margin: 10px 0; /* Margin for spacing between fields */
     border: 2px solid #E1E1E1; /* Border style */
     border-radius: 5px;
+  }
+
+  .equal-container {
+    display: flex;
+    gap: 0.5em;
+    width: 49.25%;
+  }
+
+  .equal-container label{
+
+    width: 50%;
+    text-align: center;
+    padding: 12px; /* Padding inside the input fields */
+    margin: 10px 0; /* Margin for spacing between fields */
+    border: 2px solid #E1E1E1;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .equal-container input {
+    display: none;
+  }
+
+  .file-upload-wrapper {
+    resize: none;
+    width: 100%; /* Full width */
+    padding: 1.5rem;
+    border: 2px solid #E1E1E1; /* Border style */
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  .file-input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .file-input-label {
+    background-color: #3532E5; /* Use your desired color */
+    padding: 0.5rem 1rem;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .file-input-label:hover {
+    background-color: #2a29d4; /* Darken the color a bit on hover */
+  }
+  
+  .file-upload-info {
+    margin-top: 1.5rem;
+    text-align: center; 
+    font-size: 1rem;
+  }
+
+  .label-container {
+    display: flex;
+    flex-direction: column;
+    gap: .25em;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-top: 1em;
+  }
+
+  .label-container input {
+    margin-right: 0.5rem;
+  }
+
+  .adress-container textarea{
+    height: 6rem;
+  }
+
+  .important-notice {
+    text-align: center;
+    margin: 0.5em auto 0 auto;
+    background-color: #3532E5;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 0.55rem 0.25rem;
+    color: #E1E1E1;
   }
